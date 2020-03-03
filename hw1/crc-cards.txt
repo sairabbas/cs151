@@ -1,0 +1,33 @@
+Class: System
+Responsibilities: manage reservation file, manage menus, manage user system, manage reservation system, manage theatre
+Collaborators: UserSystem, ReservationSystem, Theatre
+
+Class: Theatre
+Responsibilities: manage date, manage time, manage title, manage seats
+Collaborators: ReservationSystem, System
+
+Class: UserSystem
+Responsibilities: manage users
+Collaborators: User, System
+
+Class: User
+Responsibilities: manage id, manage password
+Collaborators: UserSystem, Reservation
+
+Class: ReservationSystem
+Responsibilities: manage reservations
+Collaborators: Reservation, System, Theatre
+
+Class: Reservation
+Responsibilities: manage date, manage time, manage user, manage ticket
+Collaborators: ReservationSystem, Ticket, User
+
+Class: Ticket 
+Responsibilities: manage price, manage discount, manage seats
+Collaborators: Discount, Reservation
+
+Class: Discount
+Responsibilities: manage discount, manage persons, manage date
+Collaborators: Ticket, Reservation
+
+
